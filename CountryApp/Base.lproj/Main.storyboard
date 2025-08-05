@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D8D-4G-pJo">
-                                <rect key="frame" x="16" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" id="EET-fk-coZ" customClass="CountryCell" customModule="CountryApp" customModuleProvider="target">
@@ -103,7 +103,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbA-TA-a0x">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="60.333333333333336"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-hf-4aW">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-hf-4aW">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="60.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="Gc5-6D-me8"/>
@@ -111,7 +111,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="30"/>
+                                                                    <integer key="value" value="25"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
@@ -124,8 +124,6 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="nF7-hf-4aW" firstAttribute="leading" secondItem="IbA-TA-a0x" secondAttribute="leading" constant="16" id="JtG-2Q-bF6"/>
-                                                        <constraint firstItem="EH7-Sv-Ozb" firstAttribute="leading" secondItem="nF7-hf-4aW" secondAttribute="trailing" constant="16" id="L6y-Us-YUH"/>
                                                         <constraint firstAttribute="height" constant="60" id="Oyz-9w-UA7"/>
                                                     </constraints>
                                                 </stackView>
@@ -150,10 +148,8 @@
                         <constraints>
                             <constraint firstItem="bN2-5w-jBu" firstAttribute="bottom" secondItem="D8D-4G-pJo" secondAttribute="bottom" id="VaQ-0f-eES"/>
                             <constraint firstItem="D8D-4G-pJo" firstAttribute="leading" secondItem="bN2-5w-jBu" secondAttribute="leading" id="a4g-4f-ZFA"/>
-                            <constraint firstItem="D8D-4G-pJo" firstAttribute="leading" secondItem="bN2-5w-jBu" secondAttribute="leading" constant="16" id="dtQ-fB-kfK"/>
                             <constraint firstItem="D8D-4G-pJo" firstAttribute="top" secondItem="bN2-5w-jBu" secondAttribute="top" id="nx5-0H-6lk"/>
                             <constraint firstItem="bN2-5w-jBu" firstAttribute="trailing" secondItem="D8D-4G-pJo" secondAttribute="trailing" id="onz-dh-Bck"/>
-                            <constraint firstItem="D8D-4G-pJo" firstAttribute="trailing" secondItem="bN2-5w-jBu" secondAttribute="trailing" constant="16" id="p4C-0Y-9Fq"/>
                         </constraints>
                     </view>
                     <connections>
