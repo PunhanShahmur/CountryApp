@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             
             controller.modalPresentationStyle = .fullScreen
             
+            
             show(controller, sender: nil)
             
         } else {
