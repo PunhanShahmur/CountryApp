@@ -41,6 +41,8 @@ class CountryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! CountryCell
         
+        cell.countryImage.layer.cornerRadius = 25
+        
         cell.name.text = country.name
         cell.countryImage.image = country.image
         

@@ -17,6 +17,7 @@ class CountryDetailViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "City list"
         
         cityTable.delegate = self
         cityTable.dataSource = self

@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
     }
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
             controller.modalPresentationStyle = .fullScreen
             
             
-            show(controller, sender: nil)
+            navigationController?.show(controller, sender: nil)
             
         } else {
             print("ab")
