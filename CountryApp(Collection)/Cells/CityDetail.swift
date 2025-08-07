@@ -11,4 +11,5 @@ class CityDetail: UICollectionViewCell {
     
     @IBOutlet weak var cityImage: UIImageView!
     @IBOutlet weak var cityDescription: UILabel!
+    
 }

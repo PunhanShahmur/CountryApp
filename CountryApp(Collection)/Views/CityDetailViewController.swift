@@ -20,7 +20,7 @@ class CityDetailViewController: UIViewController, UICollectionViewDelegate, UICo
 
         cityCollection.delegate = self
         cityCollection.dataSource = self
-        
+    
         
     }
     
@@ -40,6 +40,18 @@ class CityDetailViewController: UIViewController, UICollectionViewDelegate, UICo
         return cell
         
     }
+    
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        let width = collectionView.bounds.width
+//        
+//        print(UICollectionViewFlowLayout.automaticSize.height)
+//        print("----")
+//        print(width)
+//        return CGSize(width: width, height: UICollectionViewFlowLayout.automaticSize.height)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -63,25 +75,25 @@ class CityDetailViewController: UIViewController, UICollectionViewDelegate, UICo
 //        
         
         let text = city?.description ?? ""
-           let labelWidth = collectionView.frame.width - 32 // padding varsa
-           let font = UIFont.systemFont(ofSize: 16)
-           
            let boundingRect = NSString(string: text).boundingRect(
-               with: CGSize(width: labelWidth, height: .greatestFiniteMagnitude),
+            with: CGSize(width: collectionView.bounds.width, height: .greatestFiniteMagnitude),
                options: [.usesLineFragmentOrigin, .usesFontLeading],
-               attributes: [.font: font],
                context: nil
            )
+    
            
            let labelHeight = ceil(boundingRect.height)
-           let imageHeight: CGFloat = 200 // imageView sabit hündürlükdədirsə, onu daxil et
+           let imageHeight: CGFloat = 250 // imageView sabit hündürlükdədirsə, onu daxil et
            
-           let verticalPadding: CGFloat = 32 // label + imageView arası padding + top & bottom
+           let totalHeight = labelHeight + imageHeight
            
-           let totalHeight = labelHeight + imageHeight + verticalPadding
-           
+        
+        print(boundingRect)
+        print(labelHeight)
+        print(totalHeight)
+        print(collectionView.frame.width)
+        
            return CGSize(width: collectionView.frame.width, height: totalHeight)
     }
-    
 
 }
