@@ -217,13 +217,72 @@
                     <view key="view" contentMode="scaleToFill" id="7cZ-Ar-dLt">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QwK-yO-VS9">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Li-2E-ivo">
+                                    <size key="itemSize" width="402" height="670"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityDetail" id="5JT-R1-SZr" customClass="CityDetail" customModule="CountryApp_Collection_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="670"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PFt-HT-cs7">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="670"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-3F-naa">
+                                                    <rect key="frame" x="20" y="320" width="362" height="330"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ismayilli" translatesAutoresizingMaskIntoConstraints="NO" id="50w-hg-SgS">
+                                                    <rect key="frame" x="0.0" y="40" width="402" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="TA0-vJ-bN1"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="50w-hg-SgS" firstAttribute="top" secondItem="PFt-HT-cs7" secondAttribute="top" constant="40" id="1i3-M1-5rZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="50w-hg-SgS" secondAttribute="trailing" id="C7z-VE-txd"/>
+                                                <constraint firstItem="ZJx-3F-naa" firstAttribute="top" secondItem="50w-hg-SgS" secondAttribute="bottom" constant="30" id="Cgx-tD-Mw8"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZJx-3F-naa" secondAttribute="bottom" constant="20" id="FQQ-2h-Lcb"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZJx-3F-naa" secondAttribute="trailing" constant="20" id="MxU-qp-HvH"/>
+                                                <constraint firstItem="50w-hg-SgS" firstAttribute="leading" secondItem="PFt-HT-cs7" secondAttribute="leading" id="xli-Qw-flx"/>
+                                                <constraint firstItem="ZJx-3F-naa" firstAttribute="leading" secondItem="PFt-HT-cs7" secondAttribute="leading" constant="20" id="yZE-dN-Piu"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="402" height="670"/>
+                                        <connections>
+                                            <outlet property="cityDescription" destination="ZJx-3F-naa" id="U6A-1I-YLC"/>
+                                            <outlet property="cityImage" destination="50w-hg-SgS" id="OuW-z5-T8P"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="go1-Zb-ang"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QwK-yO-VS9" firstAttribute="leading" secondItem="go1-Zb-ang" secondAttribute="leading" id="8BP-k9-Fon"/>
+                            <constraint firstItem="go1-Zb-ang" firstAttribute="bottom" secondItem="QwK-yO-VS9" secondAttribute="bottom" id="dfy-zh-4mt"/>
+                            <constraint firstItem="QwK-yO-VS9" firstAttribute="top" secondItem="go1-Zb-ang" secondAttribute="top" id="fBP-8z-o5s"/>
+                            <constraint firstItem="go1-Zb-ang" firstAttribute="trailing" secondItem="QwK-yO-VS9" secondAttribute="trailing" id="lxy-Vk-qKc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityCollection" destination="QwK-yO-VS9" id="QBJ-Yk-eem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pjr-lQ-W5A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3369" y="-2"/>
+            <point key="canvasLocation" x="3368.65671641791" y="-2.0594965675057209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XGU-Pg-PPP">
@@ -246,6 +305,7 @@
     </scenes>
     <resources>
         <image name="atl" width="225" height="225"/>
+        <image name="ismayilli" width="1080" height="1080"/>
         <namedColor name="loginButton">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
